@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f7fa"
+    tools:context=".Auth">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/car" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/grey_back"
+        android:ems="10"
+        android:hint="Login"
+        android:inputType="textPersonName"
+        android:padding="15dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="7dp"
+        android:paddingRight="7dp"
+        android:paddingBottom="3dp"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="435dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
