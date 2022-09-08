@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "463099006706",
+    "firebase_url": "https://hack-8645c-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "hack-8645c",
+    "storage_bucket": "hack-8645c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:463099006706:android:2a40d68865991809daca6b",
+        "android_client_info": {
+          "package_name": "com.example.hacktaxi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "463099006706-pffg99h41nclvvc4u18qdg5ir7in5dkf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZrYAvH7XEZISXcMSURP3ziSykIYeTyRg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "463099006706-pffg99h41nclvvc4u18qdg5ir7in5dkf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
