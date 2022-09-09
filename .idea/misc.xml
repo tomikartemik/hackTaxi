@@ -8,6 +8,9 @@
         <entry key="app/src/main/res/drawable/style_for_items.xml" value="0.283" />
         <entry key="app/src/main/res/layout/activity_auth.xml" value="0.2841221242711164" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33195201486781023" />
+        <entry key="app/src/main/res/layout/fragment_create.xml" value="0.33106884057971014" />
+        <entry key="app/src/main/res/layout/fragment_roads.xml" value="0.33106884057971014" />
+        <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.33106884057971014" />
         <entry key="app/src/main/res/menu/menu.xml" value="0.40260416666666665" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.283" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.283" />

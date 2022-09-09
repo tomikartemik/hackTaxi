@@ -23,6 +23,7 @@
         app:menu="@menu/menu" />
 
     <FrameLayout
+        android:id="@+id/frame"
         android:layout_width="409dp"
         android:layout_height="729dp"
         android:background="#f4f7fa"
