@@ -3,6 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Projects/hackTaxi/app/src/main/res/drawable/grey_back.xml" value="0.1065" />
+        <entry key="..\:/Android Projects/hackTaxi/app/src/main/res/drawable/ic_baseline_arrow_forward_24.xml" value="0.1065" />
+        <entry key="..\:/Android Projects/hackTaxi/app/src/main/res/drawable/ic_baseline_exit_to_app_24.xml" value="0.1185" />
+        <entry key="..\:/Android Projects/hackTaxi/app/src/main/res/layout/activity_auth.xml" value="0.22826086956521738" />
+        <entry key="..\:/Android Projects/hackTaxi/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/Android Projects/hackTaxi/app/src/main/res/layout/fragment_create.xml" value="0.22826086956521738" />
+        <entry key="..\:/Android Projects/hackTaxi/app/src/main/res/layout/fragment_roads.xml" value="0.22826086956521738" />
+        <entry key="..\:/Android Projects/hackTaxi/app/src/main/res/layout/fragment_settings.xml" value="0.25" />
+        <entry key="..\:/Android Projects/hackTaxi/app/src/main/res/layout/road_item.xml" value="0.22826086956521738" />
         <entry key="app/src/main/res/drawable/back.xml" value="0.283" />
         <entry key="app/src/main/res/drawable/grey_back.xml" value="0.283" />
         <entry key="app/src/main/res/drawable/style_for_items.xml" value="0.283" />

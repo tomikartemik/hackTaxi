@@ -1,40 +1,35 @@
 package com.example.hacktaxi
 
 import android.content.Intent
-import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import com.google.firebase.auth.FirebaseAuth
-
-lateinit var firebaseAuth: FirebaseAuth
-lateinit var pref: SharedPreferences
+import androidx.appcompat.app.AppCompatActivity
+import com.example.hacktaxi.databinding.FragmentSettingsBinding
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class SettingsFragment : Fragment() {
+    lateinit var settings_bin: FragmentSettingsBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_settings, container, false)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val button : Button = view.findViewById(R.id.button)
-        button.setOnClickListener{
-            firebaseAuth.signOut()
+        settings_bin = FragmentSettingsBinding.inflate(layoutInflater)
+        settings_bin.name.setText(pref.getString("Name", ""))
+        settings_bin.button.setOnClickListener{
+            Firebase.auth.signOut()
             val creator = pref.edit()
             creator.remove("Name")
             creator.remove("UserId")
             creator.apply()
-            startActivity(Intent(this.context , MainActivity::class.java))
+            startActivity(Intent(this.context , Auth::class.java))
             activity?.finish()
         }
-        super.onViewCreated(view, savedInstanceState)
+        return settings_bin.root
     }
-
     companion object {
         @JvmStatic
         fun newInstance() = SettingsFragment()

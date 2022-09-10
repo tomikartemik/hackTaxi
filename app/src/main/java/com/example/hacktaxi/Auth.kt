@@ -15,7 +15,6 @@ import com.google.firebase.database.FirebaseDatabase
 class Auth : AppCompatActivity() {
     lateinit var auth: FirebaseAuth
     lateinit var databaseReference: DatabaseReference
-    lateinit var pref: SharedPreferences
     lateinit var login: String
     lateinit var pass: String
 
@@ -53,14 +52,11 @@ class Auth : AppCompatActivity() {
                             hashMap.put("username", login)
                             databaseReference.setValue(hashMap).addOnCompleteListener(this) {
                                 if (it.isSuccessful) {
-                                    Toast.makeText(this, userId, Toast.LENGTH_SHORT).show()
                                     val creator = pref.edit()
                                     creator.putString("Name", login)
                                     creator.putString("UserId", userId)
                                     creator.apply()
                                     startActivity(Intent(this, MainActivity::class.java))
-                                    Log.d("Name", pref.getString("Name", null).toString())
-                                    Log.d("UserId", pref.getString("UserId", null).toString())
                                     finish()
                                 }
                             }
@@ -92,8 +88,6 @@ class Auth : AppCompatActivity() {
                             creator.putString("UserId", userId)
                             creator.apply()
                             startActivity(Intent(this, MainActivity::class.java))
-                            Log.d("Name", pref.getString("Name", null).toString())
-                            Log.d("UserId", pref.getString("UserId", null).toString())
                             finish()
                         } else {
                             // If sign in fails, display a message to the user.

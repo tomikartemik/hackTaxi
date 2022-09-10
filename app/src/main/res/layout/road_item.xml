@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="30dp"
+    android:background="@drawable/grey_back"
+    android:padding="30dp">
+
+    <TextView
+        android:id="@+id/form_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/form_item"
+        app:layout_constraintStart_toEndOf="@+id/form_item"
+        app:layout_constraintTop_toTopOf="@+id/form_item"
+        app:srcCompat="@drawable/ic_baseline_arrow_forward_24" />
+
+    <TextView
+        android:id="@+id/to_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/form_item"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/form_item" />
+
+    <TextView
+        android:id="@+id/date_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="30dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/form_item"
+        app:layout_constraintTop_toBottomOf="@+id/form_item" />
+
+    <TextView
+        android:id="@+id/time_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/date_item"
+        app:layout_constraintStart_toEndOf="@+id/date_item"
+        app:layout_constraintTop_toTopOf="@+id/date_item" />
+
+    <TextView
+        android:id="@+id/places_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/time_item"
+        app:layout_constraintStart_toEndOf="@+id/time_item"
+        app:layout_constraintTop_toTopOf="@+id/time_item" />
+</androidx.constraintlayout.widget.ConstraintLayout>
