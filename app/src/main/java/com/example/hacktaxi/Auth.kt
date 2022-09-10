@@ -56,7 +56,7 @@ class Auth : AppCompatActivity() {
                                     creator.putString("Name", login)
                                     creator.putString("UserId", userId)
                                     creator.apply()
-                                    startActivity(Intent(this, MainActivity::class.java))
+                                    startActivity(Intent(this, Pasport::class.java))
                                     finish()
                                 }
                             }

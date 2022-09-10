@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Pasport">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:text="Заполните информацию о себе"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/name_p"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Имя"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/secondName_p"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Фамилия"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/name_p"
+        app:layout_constraintStart_toStartOf="@+id/name_p"
+        app:layout_constraintTop_toBottomOf="@+id/name_p" />
+
+    <EditText
+        android:id="@+id/otch_p"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Отчество"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/secondName_p"
+        app:layout_constraintStart_toStartOf="@+id/secondName_p"
+        app:layout_constraintTop_toBottomOf="@+id/secondName_p" />
+
+    <com.vicmikhailau.maskededittext.MaskedEditText
+        android:id="@+id/bday_p"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Дата рождения"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/otch_p"
+        app:layout_constraintStart_toStartOf="@+id/otch_p"
+        app:layout_constraintTop_toBottomOf="@+id/otch_p"
+        app:mask="##.##.####" />
+
+    <TextView
+        android:id="@+id/reg_p"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/back"
+        android:padding="15dp"
+        android:text="Зарегистрироваться"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/number"
+        app:layout_constraintStart_toStartOf="@+id/number"
+        app:layout_constraintTop_toBottomOf="@+id/number" />
+
+    <com.vicmikhailau.maskededittext.MaskedEditText
+        app:mask="+#(###)###-##-##"
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Номер телефона"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/bday_p"
+        app:layout_constraintStart_toStartOf="@+id/bday_p"
+        app:layout_constraintTop_toBottomOf="@+id/bday_p" />
+</androidx.constraintlayout.widget.ConstraintLayout>

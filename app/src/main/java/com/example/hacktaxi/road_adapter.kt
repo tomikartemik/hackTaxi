@@ -17,6 +17,8 @@ class road_adapter(private val context : FragmentActivity?, private val roadList
         var date: TextView = view.findViewById(R.id.date_item)
         var time: TextView = view.findViewById(R.id.time_item)
         var places: TextView = view.findViewById(R.id.places_item)
+        var number: TextView = view.findViewById(R.id.number_et)
+        var driver: TextView = view.findViewById(R.id.driver_tv)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -31,6 +33,8 @@ class road_adapter(private val context : FragmentActivity?, private val roadList
         holder.date.text = road.date
         holder.time.text = road.time
         holder.places.text = road.places
+        holder.number.text = road.number
+        holder.driver.text = road.driver
     }
 
     override fun getItemCount(): Int {

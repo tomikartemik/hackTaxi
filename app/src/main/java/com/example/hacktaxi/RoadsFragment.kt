@@ -38,7 +38,7 @@ class RoadsFragment : Fragment() {
                 road_list.clear()
                 for (dataSnapShot: DataSnapshot in snapshot.children){
                     val user = dataSnapShot.getValue(Road::class.java)
-                    if (user != null) {
+                    if (user!!.active == "true") {
                         road_list.add(user)
                     }
                 }

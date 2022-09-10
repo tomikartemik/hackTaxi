@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.hacktaxi.databinding.FragmentCreateBinding
 import com.google.firebase.database.DatabaseReference
@@ -38,11 +39,15 @@ class CreateFragment : Fragment() {
     private fun createEvent(date: String, time: String, places: String, from: String, to: String){
         var reference: DatabaseReference? = FirebaseDatabase.getInstance().getReference()
         var hashMap: HashMap<String, String> = HashMap()
+        hashMap.put("driver", pref.getString("DriverName", "-").toString())
+        hashMap.put("number", pref.getString("Number", "-").toString())
+        hashMap.put("driverId", pref.getString("UserId", "").toString())
         hashMap.put("date", date)
         hashMap.put("time", time)
         hashMap.put("places", places)
         hashMap.put("from", from)
         hashMap.put("to", to)
+        hashMap.put("active", "true")
         reference!!.child("Roads").push().setValue(hashMap)
 
     }
