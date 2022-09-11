@@ -45,21 +45,12 @@ class Auth : AppCompatActivity() {
                         if (it.isSuccessful) {
                             val currentUser = auth.currentUser
                             val userId: String = currentUser!!.uid
-                            databaseReference =
-                                FirebaseDatabase.getInstance().getReference("Users").child(userId)
-                            val hashMap: HashMap<String, String> = HashMap()
-                            hashMap.put("userId", userId)
-                            hashMap.put("username", login)
-                            databaseReference.setValue(hashMap).addOnCompleteListener(this) {
-                                if (it.isSuccessful) {
-                                    val creator = pref.edit()
-                                    creator.putString("Name", login)
-                                    creator.putString("UserId", userId)
-                                    creator.apply()
-                                    startActivity(Intent(this, Pasport::class.java))
-                                    finish()
-                                }
-                            }
+                            val creator = pref.edit()
+                            creator.putString("Name", login)
+                            creator.putString("UserId", userId)
+                            creator.apply()
+                            startActivity(Intent(this, Pasport::class.java))
+                            finish()
                         } else {
                             Toast.makeText(this, "Try again!", Toast.LENGTH_SHORT).show()
                         }
@@ -96,6 +87,7 @@ class Auth : AppCompatActivity() {
                                 "Authentication failed.",
                                 Toast.LENGTH_SHORT
                             ).show()
+
                         }
                     }
             }

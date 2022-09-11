@@ -32,6 +32,8 @@ class Pasport : AppCompatActivity() {
     private fun addPasport(name: String, secondName: String, patronymic: String, bDay: String, number: String){
         var reference: DatabaseReference? = FirebaseDatabase.getInstance().getReference("Users")
         var hashMap: HashMap<String, String> = HashMap()
+        hashMap.put("userId", pref.getString("UserId", "").toString())
+        hashMap.put("username", pref.getString("Name", "").toString())
         hashMap.put("number", number)
         hashMap.put("name", name)
         hashMap.put("secondName", secondName)
